@@ -6,7 +6,7 @@ RUN apt-get -y install gnupg2 apt-transport-https ca-certificates ruby-hocon
 RUN echo 'deb https://dl.bintray.com/thehive-project/debian-stable any main' |  tee -a /etc/apt/sources.list.d/thehive-project.list
 RUN apt-key adv --keyserver hkp://pgp.circl.lu --recv-key 562CBC1C
 RUN apt-get -y update
-RUN apt-get -y install thehive
+RUN apt-get -y install thehive=3.2.1-1
 
 # Copy entrypoint
 COPY ./entrypoint.sh /sbin/entrypoint.sh
